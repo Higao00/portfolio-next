@@ -1,40 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# **Portfólio Next.js**
 
-First, run the development server:
+## **Descrição do Projeto**
+O **Portfólio Next.js** é um site criado para exibir projetos e habilidades profissionais. Ele utiliza tecnologias modernas como Next.js, Styled Components, Material-UI e Framer Motion. O site foi projetado para ser estático, garantindo maior desempenho e escalabilidade. O deploy é feito diretamente na AWS S3.
 
+---
+
+## **Dependências do Projeto**
+
+### **Dependências de Produção**
+| Dependência               | Versão      | Descrição                                                                 |
+|---------------------------|-------------|---------------------------------------------------------------------------|
+| `@emailjs/browser`        | `^4.4.1`    | Biblioteca para envio de e-mails diretamente do navegador.               |
+| `@emotion/react`          | `^11.13.5`  | Biblioteca para estilização dinâmica com suporte a Material-UI.          |
+| `@emotion/styled`         | `^11.13.5`  | API para criar componentes estilizados com Emotion.                      |
+| `@mui/icons-material`     | `^5.10.3`   | Coleção de ícones para uso com Material-UI.                               |
+| `@mui/lab`                | `^5.0.0-alpha.101` | Componentes experimentais para Material-UI.                              |
+| `@mui/material`           | `^5.10.3`   | Biblioteca de componentes para design com Material-UI.                   |
+| `framer-motion`           | `^11.13.1`  | Biblioteca para animações declarativas no React.                         |
+| `next`                    | `^15.0.3`   | Framework para React com suporte a renderização no lado do servidor (SSR).|
+| `react`                   | `^18.3.1`   | Biblioteca principal para construção da interface.                       |
+| `react-dom`               | `^18.3.1`   | Biblioteca para manipulação do DOM em projetos React.                    |
+| `react-hook-form`         | `^7.53.2`   | Gerenciamento de formulários e validações.                               |
+| `styled-components`       | `^6.1.13`   | Biblioteca para estilização baseada em componentes.                      |
+
+### **Dependências de Desenvolvimento**
+| Dependência               | Versão      | Descrição                                                                |
+|---------------------------|-------------|---------------------------------------------------------------------------|
+| `@types/node`             | `^20.17.9`  | Tipos do Node.js para TypeScript.                                        |
+| `@types/react`            | `^18.3.12`  | Tipos do React para TypeScript.                                          |
+| `@types/react-dom`        | `^18`       | Tipos do React DOM para TypeScript.                                      |
+| `@types/styled-components`| `^5.1.34`   | Tipos para a biblioteca Styled Components.                               |
+| `typescript`              | `^5`        | Superset do JavaScript para adicionar tipagem estática.                  |
+
+---
+
+## **Configuração do Ambiente**
+
+### **Requisitos**
+- Node.js >= 18.x
+- Gerenciador de pacotes (`npm` ou `yarn`)
+
+### **Instalação**
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Higao00/portfolio-next
+   cd portfolio-next
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+---
+
+## **Execução do Projeto**
+
+### **Ambiente de Desenvolvimento**
+Inicie o servidor local:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse no navegador:
+```
+http://localhost:3000
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### **Build para Produção**
+Gere os arquivos estáticos para produção:
+```bash
+npm run build
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Os arquivos gerados estarão na pasta `out/`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Deploy na AWS S3**
 
-## Learn More
+### **Pré-requisitos**
+1. Configure o bucket S3 para hospedar um site estático:
+   - Habilite o modo de hospedagem de site estático.
+   - Defina o documento de índice como `index.html` e o documento de erro como `index.html`.
 
-To learn more about Next.js, take a look at the following resources:
+2. Configure o AWS CLI com suas credenciais:
+   ```bash
+   aws configure
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### **Deploy**
+Carregue os arquivos estáticos para o bucket:
+```bash
+aws s3 sync ./out s3://<nome-do-seu-bucket> --delete
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O site estará disponível no endpoint público do bucket.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Estrutura do Projeto**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```plaintext
+.
+├── public/                # Arquivos estáticos (imagens, favicon, etc.)
+├── src/
+│   ├── components/        # Componentes React reutilizáveis
+│   ├── pages/             # Páginas do Next.js
+│   │   ├── index.tsx      # Página inicial
+│   │   └── contato.tsx    # Página de contato
+│   ├── styles/            # Estilos globais
+│   ├── utils/             # Funções utilitárias
+│   └── ...
+├── Dockerfile             # Configuração Docker
+├── next.config.js         # Configuração do Next.js
+├── package.json           # Dependências e scripts
+└── ...
+```
+
+---
+
+## **SEO e Meta Tags**
+As páginas incluem meta tags para otimização em mecanismos de busca e compartilhamento em redes sociais:
+- **`title`**
+- **`description`**
+- **`og:title`**, **`og:description`**, **`og:image`**
+- **`twitter:title`**, **`twitter:description`**
+
+Consulte o arquivo `src/pages/index.tsx` como exemplo para adicionar meta tags nas demais páginas.
+
+---
+
+### **Tecnologias Usadas**
+- **Next.js**: Framework para desenvolvimento web.
+- **Styled Components**: Estilização CSS-in-JS.
+- **Material-UI**: Componentes de UI prontos para uso.
+- **AWS S3**: Hospedagem do site estático.
