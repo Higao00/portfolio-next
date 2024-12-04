@@ -118,4 +118,4 @@ Consulte o arquivo `src/pages/index.tsx` como exemplo para adicionar meta tags n
 - **Next.js**: Framework para desenvolvimento web.
 - **Styled Components**: Estilização CSS-in-JS.
 - **Material-UI**: Componentes de UI prontos para uso.
-- **AWS S3**: Hospedagem do site estático.
+- **AWS S3**: Hospedagem dos arquivos estático.
