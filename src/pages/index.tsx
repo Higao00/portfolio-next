@@ -16,15 +16,15 @@ export default function HomePage() {
         <meta property="og:description" content="Explore o portfólio de Higor, um desenvolvedor Full Stack especializado em tecnologias como React, Node.js, PHP e muito mais. Veja projetos inovadores e soluções tecnológicas que entregam resultados de alta qualidade." />
         <meta property="og:url" content="https://portfolio-next.zurke.com.br" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/54690671?v=6" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Portfólio de Higor" />
 
         {/* Outras tags para SEO */}
         <meta name="twitter:title" content="Portfólio de Higor - Desenvolvedor Full Stack | React, Node.js, PHP e mais" />
         <meta name="twitter:description" content="Explore o portfólio de Higor, um desenvolvedor Full Stack especializado em tecnologias como React, Node.js, PHP e muito mais. Veja projetos inovadores e soluções tecnológicas que entregam resultados de alta qualidade." />
-        <meta name="twitter:image" content="/favicon.ico" />
-        <meta property="twitter:card" content="/favicon.ico" />
+        <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/54690671?v=6" />
+        <meta property="twitter:card" content="https://avatars.githubusercontent.com/u/54690671?v=6" />
       </Head>
 
       <AnimatePresence>

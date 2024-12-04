@@ -16,14 +16,14 @@ export default function SocialNetworksPage() {
         <meta property="og:description" content="Siga Higor nas redes sociais e conecte-se para saber mais sobre seu trabalho como desenvolvedor." />
         <meta property="og:url" content="https://portfolio-next.zurke.com.br/social-network" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/54690671?v=6" />
         <meta property="og:site_name" content="Portfólio de Higor" />
 
         {/* Twitter */}
         <meta name="twitter:title" content="Social Network - Portfólio de Higor | Desenvolvedor Full Stack" />
         <meta name="twitter:description" content="Conecte-se com Higor no LinkedIn, GitHub e outras redes sociais para acompanhar novidades." />
-        <meta name="twitter:image" content="/favicon.ico" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/54690671?v=6" />
+        <meta name="twitter:card" content="https://avatars.githubusercontent.com/u/54690671?v=6" />
 
       </Head>
 
