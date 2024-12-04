@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  front-end:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Exponha a porta 3000 do container na porta 3000 do host
+    environment:
+      - NODE_ENV=dev # Define o ambiente como produção
+    volumes:
+      - /app/node_modules # Garante que os módulos instalados não sejam sobrescritos
+    command: npm run dev # Use o comando direto para rodar a aplicação em produção
