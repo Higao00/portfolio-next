@@ -80,24 +80,7 @@ Os arquivos gerados estarão na pasta `out/`.
 ## **Deploy na AWS S3**
 
 ### **Pré-requisitos**
-1. Configure o bucket S3 para hospedar um site estático:
-   - Habilite o modo de hospedagem de site estático.
-   - Defina o documento de índice como `index.html` e o documento de erro como `index.html`.
-
-2. Configure o AWS CLI com suas credenciais:
-   ```bash
-   aws configure
-   ```
-
-### **Deploy**
-Carregue os arquivos estáticos para o bucket:
-```bash
-aws s3 sync ./out s3://<nome-do-seu-bucket> --delete
-```
-
-O site estará disponível no endpoint público do bucket.
-
----
+1. Configure o bucket S3 para hospedar os arquivos estáticos:
 
 ## **Estrutura do Projeto**
 
