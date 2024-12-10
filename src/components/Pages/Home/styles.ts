@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const VideoDesktop = styled.video`
     display: none;
@@ -11,7 +11,7 @@ export const VideoDesktop = styled.video`
         position: absolute;
         display: block;
     }
-`
+`;
 export const VideoMobile = styled.video`
     width: 100%;
     height: 100vh;
@@ -22,7 +22,7 @@ export const VideoMobile = styled.video`
     @media (min-width: 1280px) {
         display: none;
     }
-`
+`;
 
 export const Container = styled.section`
     height: calc(100vh - 110px);
@@ -47,16 +47,17 @@ export const Container = styled.section`
         flex-direction: row;
         column-gap: 1%;
     }
-`
+`;
 
 export const Image = styled.img`
     max-width: 100%;
     width: 100%;
     height: auto;
     max-height: calc((100vh - 110px) / 2);
+    object-fit: contain;
 
     @media (min-width: 1280px) {
         width: 100%;
         height: calc((100vh - 110px) / 2);
     }
-`
+`;

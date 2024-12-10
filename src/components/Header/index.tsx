@@ -12,7 +12,7 @@ const Header = () => {
         <>
             <S.Container>
                 <S.ContainerLogo>
-                    <S.LogoPhoto src="https://avatars.githubusercontent.com/u/54690671?v=6" />
+                    <S.LogoPhoto src="https://avatars.githubusercontent.com/u/54690671?v=6" alt="Foto de perfil"/>
                     <S.Logo>Higor Henrique</S.Logo>
 
                     <S.ContainerButtonMenuMobile $activeButtonMobile={activeButtonMenuMobile} onClick={() => setActiveButtonMenuMobile(!activeButtonMenuMobile)}>
