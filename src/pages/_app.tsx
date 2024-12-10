@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '@/styles/GlobalStyles';
 import Header from '@/components/Header';
-import themeColors from '@/theme/themeColors';
+import themeColors from '@/styles/themeColors';
 
 const roboto = Roboto({
   subsets: ['latin'],

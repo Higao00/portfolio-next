@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 interface PropsButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    activeButtonMobile: boolean
+    activeButtonMobile: boolean;
 }
 
 export const Container = styled.main`
@@ -24,7 +24,7 @@ export const Container = styled.main`
     @media (min-width: 1280px) {
         justify-content: space-around;
     }
-`
+`;
 export const ContainerLogo = styled.div`
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@ export const ContainerLogo = styled.div`
         width: auto;
         justify-content: flex-start;
     }
-`
+`;
 export const Logo = styled.h2`
     font-family: ${({ theme }) => theme.fonts.bold};
     color: ${({ theme }) => theme.colors.shape};
@@ -44,11 +44,11 @@ export const Logo = styled.h2`
     @media (min-width: 1280px) {
         margin-left: 1rem;
     }
-`
+`;
 export const LogoPhoto = styled.img`
     width: 80px;
     border-radius: 100px;
-`
+`;
 export const MenuDesktop = styled.nav`
     display: none;
 
@@ -78,7 +78,7 @@ export const MenuDesktop = styled.nav`
             }
         }
     }
-`
+`;
 export const MenuMobile = styled.nav`
     position: fixed;
     z-index: 2;
@@ -125,8 +125,8 @@ export const MenuMobile = styled.nav`
     @media (min-width: 1280px) {
         display: none;
     }
-`
-export const ContainerButtonMenuMobile = styled.button<PropsButton>`
+`;
+export const ContainerButtonMenuMobile = styled.button<{ $activeButtonMobile: boolean }>`
     z-index: 3;
 
     background-color: transparent;
@@ -149,11 +149,11 @@ export const ContainerButtonMenuMobile = styled.button<PropsButton>`
         margin-bottom: 0.4rem;
         border-bottom: solid 3px ${({ theme }) => theme.colors.background};
 
-        transform: ${(p) => (p.activeButtonMobile ? "rotate(30deg)" : "rotate(0)")};
+        transform: ${(p) => (p.$activeButtonMobile ? "rotate(30deg)" : "rotate(0)")};
         transition: 1s;
     }
 
     @media (min-width: 1280px) {
         display: none;
     }
-`
+`;

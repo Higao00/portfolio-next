@@ -33,7 +33,7 @@ export const ContainerQrCode = styled.div`
 
     @media (min-width: 1280px) {
         width: 25vw;
-        height: 48vh;
+        height: 45vh;
 
         border-radius: 10px 0 0 10px;
     }

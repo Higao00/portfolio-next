@@ -6,10 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Exponha a porta 3000 do container na porta 3000 do host
+      - "3000:3000"
     volumes:
-      - .:/app # Monta o diretório atual no container para desenvolvimento
-      - /app/node_modules
+      - .:/app:cached
     environment:
       - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
     command: npm run dev

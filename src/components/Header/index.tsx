@@ -3,7 +3,7 @@ import * as S from "./styles"
 
 import { motion } from "framer-motion"
 import data from "./data"
-import themeColors from "@/theme/themeColors"
+import themeColors from "@/styles/themeColors"
 
 const Header = () => {
     const [activeButtonMenuMobile, setActiveButtonMenuMobile] = useState(false)
@@ -15,7 +15,7 @@ const Header = () => {
                     <S.LogoPhoto src="https://avatars.githubusercontent.com/u/54690671?v=6" />
                     <S.Logo>Higor Henrique</S.Logo>
 
-                    <S.ContainerButtonMenuMobile activeButtonMobile={activeButtonMenuMobile} onClick={() => setActiveButtonMenuMobile(!activeButtonMenuMobile)}>
+                    <S.ContainerButtonMenuMobile $activeButtonMobile={activeButtonMenuMobile} onClick={() => setActiveButtonMenuMobile(!activeButtonMenuMobile)}>
                         <b />
                         <b />
                         <b />

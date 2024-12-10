@@ -6,7 +6,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400; /* Regular como padrão */
-    background-color: #f9f9f9; /* Opcional: Ajuste a cor de fundo */
+    background-color: ${({ theme }) => theme.colors.body_transparent};
+
   }
 
   h1, h2, h3, h4, h5, h6 {
