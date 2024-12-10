@@ -49,7 +49,7 @@ export const Container = styled.section`
     }
 `;
 
-export const Image = styled.img`
+export const Images = styled.img`
     max-width: 100%;
     width: 100%;
     height: auto;

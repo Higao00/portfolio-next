@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
@@ -45,7 +46,7 @@ export const Logo = styled.h2`
         margin-left: 1rem;
     }
 `;
-export const LogoPhoto = styled.img`
+export const LogoPhoto = styled(Image)`
     width: 80px;
     border-radius: 100px;
 `;

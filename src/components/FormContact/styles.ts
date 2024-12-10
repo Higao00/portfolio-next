@@ -1,6 +1,7 @@
-import styled from "styled-components"
-import { Button, TextField } from "@mui/material"
-import LoadingButton from "@mui/lab/LoadingButton"
+import styled from "styled-components";
+import { TextField } from "@mui/material";
+import LoadingButton from "@mui/lab/LoadingButton";
+import Image from "next/image";
 
 export const Container = styled.section`
     width: 100%;
@@ -16,7 +17,7 @@ export const Container = styled.section`
         flex-direction: row;
         margin-bottom: 0;
     }
-`
+`;
 
 export const ContainerQrCode = styled.div`
     width: 80%;
@@ -37,20 +38,20 @@ export const ContainerQrCode = styled.div`
 
         border-radius: 10px 0 0 10px;
     }
-`
-export const QrCode = styled.img`
+`;
+export const QrCode = styled(Image)`
     width: 60%;
     height: auto;
 
     border-radius: 15px;
 
     object-fit: cover;
-`
+`;
 
 export const Title = styled.h3`
     padding: 1rem;
     font-family: ${({ theme }) => theme.fonts.bold};
-`
+`;
 
 export const Form = styled.form`
     width: 85%;
@@ -74,7 +75,7 @@ export const Form = styled.form`
         height: 50vh;
         justify-content: space-evenly;
     }
-`
+`;
 
 export const ContainerInput = styled.div`
     width: 100%;
@@ -83,21 +84,21 @@ export const ContainerInput = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-`
+`;
 export const TitleError = styled.span`
     font-size: 14px;
     font-family: ${({ theme }) => theme.fonts.regular};
     color: red;
 
     padding: 0.5rem;
-`
+`;
 export const Input = styled(TextField)`
     width: 100%;
-`
+`;
 export const ButtonSubmit = styled(LoadingButton)`
     width: 90%;
 
     @media (min-width: 1280px) {
         width: 50%;
     }
-`
+`;
