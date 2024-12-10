@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import Image from "next/image";
 
 export const Container = styled.section`
     width: 100%;
@@ -22,7 +23,7 @@ export const Container = styled.section`
     :hover {
         transform: scale(0.96);
     }
-`
+`;
 
 export const Header = styled.div`
     width: 90%;
@@ -35,13 +36,13 @@ export const Header = styled.div`
 
     align-items: center;
     justify-content: center;
-`
+`;
 
-export const Image = styled.img`
+export const Images = styled(Image)`
     width: 100%;
     height: auto;
     max-height: 80px;
-`
+`;
 
 export const Body = styled.div`
     width: 90%;
@@ -67,4 +68,4 @@ export const Body = styled.div`
         color: #ffffff;
         text-align: center;
     }
-`
+`;

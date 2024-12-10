@@ -13,7 +13,7 @@ const CardSocialNetwork = ({ name, link, logo, type, color, qrcode }: ICardSocia
     return (
         <S.Container color={color}>
             <S.ContainerBody>
-                <S.QrCode src={qrcode} alt={`Qrcode do ${name}`} />
+                <S.QrCode width={240} height={240} src={qrcode} alt={`Qrcode do ${name}`} priority />
 
                 <S.ContainerInfo>
                     <a href={type === "email" ? `mailto:${link}` : link} target={"_blank"}>

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import styled from "styled-components"
 
 export const Container = styled.section`
@@ -41,7 +42,7 @@ export const ContainerBody = styled.div`
     }
 `
 
-export const QrCode = styled.img`
+export const QrCode = styled(Image)`
     width: auto;
     height: 100%;
 
