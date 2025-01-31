@@ -13,7 +13,7 @@ const Home = () => {
             </S.VideoMobile>
 
             <S.Container>
-                <S.Images width={840} height={350} src="https://github-readme-stats.vercel.app/api?username=higao00&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="Totalização de trabalhos" loading="lazy" />
+                <S.Images width={840} height={350} src="https://github-readme-stats.vercel.app/api?username=higao00&show_icons=true&theme=dark&include_all_commits=true&count_private=false" alt="Totalização de trabalhos" loading="lazy" />
                 <S.Images width={774} height={350} src="https://github-readme-stats.vercel.app/api/top-langs/?username=higao00&layout=compact&langs_count=7&theme=dark" alt="Top linguagem usadas" loading="lazy" />
             </S.Container>
         </Transitions>
