@@ -34,7 +34,12 @@ export const HeaderContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     padding: 0 1rem;
-    height: 70px;
+    height: 60px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 0.75rem;
+    height: 55px;
   }
 `;
 
@@ -56,6 +61,11 @@ export const LogoImage = styled(Image)`
     border-color: ${({ theme }) => theme.colors.primary[300]};
     transform: scale(1.05);
   }
+  
+  @media (max-width: 480px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const LogoText = styled.h2`
@@ -66,7 +76,11 @@ export const LogoText = styled.h2`
   margin: 0;
   
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    font-size: ${({ theme }) => theme.typography.fontSize.lg};
+    font-size: ${({ theme }) => theme.typography.fontSize.base};
+  }
+  
+  @media (max-width: 480px) {
+    display: none;
   }
 `;
 
@@ -171,6 +185,11 @@ export const MobileMenuButton = styled(motion.button)<MobileMenuButtonProps>`
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: flex;
   }
+  
+  @media (max-width: 480px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const MenuLine = styled.div<MobileMenuButtonProps>`
@@ -214,20 +233,34 @@ export const MobileMenu = styled(motion.nav)`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+  padding: 2rem 0;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: none;
+  }
+  
+  @media (max-height: 600px) {
+    align-items: flex-start;
+    padding-top: 80px;
   }
 `;
 
 export const MobileNavList = styled(motion.ul)`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0;
-  padding: 0;
+  padding: 2rem 1rem;
   list-style: none;
   text-align: center;
+  width: 100%;
+  max-width: 400px;
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+  }
 `;
 
 export const MobileNavItem = styled(motion.li)`
@@ -238,10 +271,10 @@ export const MobileNavLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
   font-family: ${({ theme }) => theme.typography.fontFamily.display};
-  font-size: ${({ theme }) => theme.typography.fontSize["2xl"]};
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
   font-weight: ${({ theme }) => theme.typography.fontWeight.semibold};
   color: ${({ theme }) => theme.colors.text.inverse};
   text-decoration: none;
@@ -250,6 +283,7 @@ export const MobileNavLink = styled.a`
   position: relative;
   overflow: hidden;
   white-space: nowrap;
+  min-height: 60px;
 
   &::before {
     content: '';
@@ -265,7 +299,7 @@ export const MobileNavLink = styled.a`
   }
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 
     &::before {
       opacity: 1;
@@ -280,7 +314,28 @@ export const MobileNavLink = styled.a`
   svg {
     position: relative;
     z-index: 1;
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: ${({ theme }) => theme.typography.fontSize.base};
+    min-height: 50px;
+    
+    svg {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem;
+    font-size: ${({ theme }) => theme.typography.fontSize.sm};
+    min-height: 45px;
+    
+    svg {
+      font-size: 1.1rem;
+    }
   }
 `;
 

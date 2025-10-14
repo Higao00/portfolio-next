@@ -8,10 +8,14 @@ export const LanguageSelector = styled.div`
   gap: 0.25rem;
   margin-left: 1rem;
   
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     margin-left: 0;
     justify-content: center;
     padding: 0.5rem 0;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+    padding-top: 1rem;
   }
 `;
 
@@ -62,6 +66,16 @@ export const LanguageButton = styled(motion.button)<{ $active?: boolean }>`
   
   &:active {
     transform: translateY(-1px) scale(1.02);
+  }
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 `;
 
