@@ -1,33 +1,42 @@
-import * as Icons from "@mui/icons-material";
+import { 
+  Home,
+  Code,
+  School,
+  Work,
+  Share,
+  ContactMail
+} from "@mui/icons-material";
+import { NavItem } from "@/types";
 
-export default [
+export const getNavigationData = (t: any): NavItem[] => [
     {
         link: "/",
-        name: "Home",
-        icon: Icons.Home,
+        name: t('navigation.home', 'Início'),
+        icon: Home,
     },
-
     {
         link: "/skills",
-        name: "Skills",
-        icon: Icons.DynamicFeed,
+        name: t('navigation.skills', 'Habilidades'),
+        icon: Code,
     },
-
     {
         link: "/formations",
-        name: "Formations",
-        icon: Icons.ImportContacts,
+        name: t('navigation.formations', 'Formação'),
+        icon: School,
     },
-
+    {
+        link: "/projects",
+        name: t('navigation.projects', 'Projetos'),
+        icon: Work,
+    },
     {
         link: "/social-networks",
-        name: "Social Networks",
-        icon: Icons.ConnectWithoutContact,
+        name: t('navigation.socialNetworks', 'Redes Sociais'),
+        icon: Share,
     },
-
     {
         link: "/contacts",
-        name: "Contacts",
-        icon: Icons.ContactPhone,
+        name: t('navigation.contact', 'Contato'),
+        icon: ContactMail,
     },
 ];

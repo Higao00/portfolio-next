@@ -57,14 +57,16 @@ export const Body = styled.div`
     justify-content: flex-start;
 
     h2 {
-        font-family: ${({ theme }) => theme.fonts.bold};
+        font-family: ${({ theme }) => theme.typography.fontFamily.display};
+        font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
         color: #ffffff;
         padding: 0;
         margin: 0;
     }
 
     p {
-        font-family: ${({ theme }) => theme.fonts.light};
+        font-family: ${({ theme }) => theme.typography.fontFamily.sans};
+        font-weight: ${({ theme }) => theme.typography.fontWeight.light};
         color: #ffffff;
         text-align: center;
     }

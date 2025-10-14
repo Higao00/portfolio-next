@@ -1,0 +1,151 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "submit": "Enviar",
+    "cancel": "Cancelar"
+  },
+  "navigation": {
+    "home": "Início",
+    "skills": "Habilidades",
+    "formations": "Formação",
+    "projects": "Projetos",
+    "socialNetworks": "Redes Sociais",
+    "contact": "Contato"
+  },
+  "home": {
+    "greeting": "Olá, eu sou",
+    "name": "Higor Henrique",
+    "title": "Desenvolvedor Full Stack",
+    "description": "Especializado em criar soluções web modernas e escaláveis utilizando as tecnologias mais atuais do mercado. Transformo ideias em experiências digitais incríveis.",
+    "contactButton": "Entre em Contato",
+    "projectsButton": "Ver Projetos",
+    "stats": {
+      "experience": "Anos de Experiência",
+      "projects": "Projetos Concluídos",
+      "clients": "Clientes Satisfeitos",
+      "technologies": "Tecnologias Dominadas"
+    }
+  },
+  "skills": {
+    "title": "Minhas Habilidades",
+    "subtitle": "Conheça as tecnologias e ferramentas que domino para criar soluções web excepcionais.",
+    "filters": {
+      "all": "Todas",
+      "frontend": "Frontend",
+      "backend": "Backend", 
+      "database": "Banco de Dados",
+      "tools": "Ferramentas"
+    },
+    "stats": {
+      "totalSkills": "Tecnologias",
+      "experience": "Anos de Exp.",
+      "projects": "Projetos",
+      "certifications": "Certificações"
+    }
+  },
+  "formations": {
+    "title": "Minha Formação",
+    "subtitle": "Minha jornada educacional e profissional, com foco em tecnologia e inovação.",
+    "status": {
+      "completed": "Concluído",
+      "inProgress": "Em Andamento",
+      "planned": "Planejado"
+    }
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "subtitle": "Conheça alguns dos projetos que desenvolvi, desde websites institucionais até sistemas complexos de gestão.",
+    "filters": {
+      "all": "Todos os Projetos",
+      "website": "Websites",
+      "system": "Sistemas",
+      "landing": "Landing Pages"
+    },
+    "status": {
+      "active": "Ativo",
+      "development": "Em Desenvolvimento",
+      "completed": "Concluído"
+    },
+    "visitButton": "Visitar",
+    "stats": {
+      "totalProjects": "Projetos Realizados",
+      "activeProjects": "Projetos Ativos",
+      "satisfaction": "Taxa de Satisfação",
+      "experience": "Anos de Experiência"
+    }
+  },
+  "socialNetworks": {
+    "title": "Redes Sociais",
+    "subtitle": "Conecte-se comigo nas redes sociais e acompanhe meu trabalho e novidades do mundo tech.",
+    "connectButton": "Conectar",
+    "stats": {
+      "platforms": "Plataformas",
+      "followers": "Seguidores",
+      "posts": "Posts",
+      "engagement": "Engajamento"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Vamos conversar sobre seu próximo projeto? Estou sempre disponível para discutir novas oportunidades.",
+    "methods": {
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "phone": "Telefone"
+    },
+    "descriptions": {
+      "whatsapp": "Resposta rápida durante horário comercial",
+      "email": "Para propostas formais e documentos", 
+      "phone": "Ligações por agendamento"
+    },
+    "actions": {
+      "sendMessage": "Enviar mensagem",
+      "sendEmail": "Enviar e-mail",
+      "callNow": "Ligar agora"
+    },
+    "form": {
+      "title": "Envie uma Mensagem",
+      "description": "Preencha o formulário abaixo que retorno o mais breve possível. Todos os campos são obrigatórios.",
+      "fields": {
+        "name": "Nome Completo",
+        "email": "E-mail",
+        "subject": "Assunto",
+        "message": "Mensagem"
+      },
+      "subjects": {
+        "development": "Desenvolvimento de Software",
+        "personal": "Contato Pessoal",
+        "help": "Ajuda com Programação",
+        "job": "Oportunidade de Trabalho",
+        "consulting": "Consultoria",
+        "general": "Dúvidas Gerais"
+      },
+      "placeholders": {
+        "message": "Descreva seu projeto ou necessidade..."
+      },
+      "validation": {
+        "nameRequired": "Nome é obrigatório",
+        "nameMinLength": "Nome deve ter pelo menos 2 caracteres",
+        "emailRequired": "E-mail é obrigatório",
+        "emailInvalid": "E-mail inválido",
+        "subjectRequired": "Assunto é obrigatório",
+        "messageRequired": "Mensagem é obrigatória",
+        "messageMinLength": "Mensagem deve ter pelo menos 10 caracteres"
+      },
+      "submitButton": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "privacyNote": "Seus dados são protegidos e utilizados apenas para responder sua mensagem. Retorno garantido em até 24 horas."
+    },
+    "stats": {
+      "responseTime": "Tempo de resposta",
+      "responseRate": "Taxa de retorno",
+      "contactMethods": "Formas de contato"
+    },
+    "successMessage": "Obrigado! Entrarei em contato em breve! 👏👏👏"
+  }
+}

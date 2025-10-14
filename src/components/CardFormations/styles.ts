@@ -54,6 +54,7 @@ export const Body = styled.div`
 `
 
 export const Title = styled.h3`
-    font-family: ${({ theme }) => theme.fonts.bold};
+    font-family: ${({ theme }) => theme.typography.fontFamily.display};
+    font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
     color: #ffffff;
 `

@@ -1,160 +1,296 @@
 import Image from "next/image";
-import React from "react";
-import styled from "styled-components";
+import { motion } from "framer-motion";
+import styled, { css } from "styled-components";
 
-interface PropsButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    activeButtonMobile: boolean;
+interface MobileMenuButtonProps {
+  $isOpen: boolean;
 }
 
-export const Container = styled.main`
-    height: 110px;
-    width: 100vw;
+export const HeaderContainer = styled(motion.header)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all ${({ theme }) => theme.duration.normal} ${({ theme }) => theme.easing.out};
 
-    z-index: 10;
-
-    bottom: 0;
-
-    position: fixed;
-
-    background-color: ${({ theme }) => theme.colors.primary};
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    @media (min-width: 1280px) {
-        justify-content: space-around;
-    }
+  &.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: ${({ theme }) => theme.shadows.lg};
+  }
 `;
-export const ContainerLogo = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 
-    width: 100%;
+export const HeaderContent = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    @media (min-width: 1280px) {
-        width: auto;
-        justify-content: flex-start;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding: 0 1rem;
+    height: 70px;
+  }
 `;
-export const Logo = styled.h2`
-    font-family: ${({ theme }) => theme.fonts.bold};
-    color: ${({ theme }) => theme.colors.shape};
 
-    @media (min-width: 1280px) {
-        margin-left: 1rem;
-    }
+export const LogoContainer = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1001;
 `;
-export const LogoPhoto = styled(Image)`
-    width: 80px;
-    border-radius: 100px;
+
+export const LogoImage = styled(Image)`
+  border-radius: 50%;
+  border: 2px solid ${({ theme }) => theme.colors.primary[400]};
+  transition: all ${({ theme }) => theme.duration.normal} ${({ theme }) => theme.easing.out};
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.primary[300]};
+    transform: scale(1.05);
+  }
 `;
-export const MenuDesktop = styled.nav`
+
+export const LogoText = styled.h2`
+  font-family: ${({ theme }) => theme.typography.fontFamily.display};
+  font-size: ${({ theme }) => theme.typography.fontSize.xl};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.text.inverse};
+  margin: 0;
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  }
+`;
+
+export const Navigation = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: none;
-
-    @media (min-width: 1280px) {
-        display: block;
-    }
-
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-
-        li {
-            padding-right: 2rem;
-            list-style-type: none;
-
-            a {
-                font-family: ${({ theme }) => theme.fonts.medium};
-                color: ${({ theme }) => theme.colors.shape};
-                text-decoration: none;
-                font-size: 1rem;
-
-                :hover {
-                    color: ${({ theme }) => theme.colors.title};
-                }
-            }
-        }
-    }
+  }
 `;
-export const MenuMobile = styled.nav`
-    position: fixed;
-    z-index: 2;
 
-    height: calc(100vh - 110px);
-    width: 100%;
-    background-color: ${({ theme }) => theme.colors.primary};
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    ul {
-        display: flex;
-        flex-direction: column;
-
-        margin: 0;
-        padding: 0;
-
-        li {
-            list-style-type: none;
-            border-bottom: solid 0.5px ${({ theme }) => theme.colors.shape_transparent};
-
-            margin: 1.5rem auto;
-            width: 100%;
-
-            display: flex;
-            justify-content: flex-start;
-
-            a {
-                font-family: ${({ theme }) => theme.fonts.medium};
-                color: ${({ theme }) => theme.colors.shape};
-                text-decoration: none;
-                font-size: 1.5rem;
-                margin-left: 1rem;
-
-                :hover {
-                    color: ${({ theme }) => theme.colors.title};
-                }
-            }
-        }
-    }
-
-    @media (min-width: 1280px) {
-        display: none;
-    }
+export const NavList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    gap: 1rem;
+  }
 `;
-export const ContainerButtonMenuMobile = styled.button<{ $activeButtonMobile: boolean }>`
-    z-index: 3;
 
-    background-color: transparent;
+export const NavItem = styled(motion.li)`
+  position: relative;
+`;
 
-    height: 55px;
-    width: 55px;
+export const NavLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-family: ${({ theme }) => theme.typography.fontFamily.sans};
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
+  color: ${({ theme }) => theme.colors.neutral[300]};
+  text-decoration: none;
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  transition: all ${({ theme }) => theme.duration.fast} ${({ theme }) => theme.easing.out};
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
 
-    border-radius: 100px;
-    border: solid 2px ${({ theme }) => theme.colors.background};
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${({ theme }) => theme.colors.gradients.primary};
+    opacity: 0;
+    transition: opacity ${({ theme }) => theme.duration.fast} ${({ theme }) => theme.easing.out};
+    border-radius: ${({ theme }) => theme.borderRadius.lg};
+  }
 
+  &:hover {
+    color: ${({ theme }) => theme.colors.text.inverse};
+    transform: translateY(-2px);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    color: ${({ theme }) => theme.colors.text.inverse};
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+  }
+`;
+
+export const MobileMenuButton = styled(motion.button)<MobileMenuButtonProps>`
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  }
+`;
 
-    b {
-        width: 20px;
-        height: 1px;
+export const MenuLine = styled.div<MobileMenuButtonProps>`
+  width: 24px;
+  height: 2px;
+  background: ${({ theme }) => theme.colors.text.inverse};
+  border-radius: 2px;
+  transition: all ${({ theme }) => theme.duration.normal} ${({ theme }) => theme.easing.out};
+  position: relative;
 
-        margin-bottom: 0.4rem;
-        border-bottom: solid 3px ${({ theme }) => theme.colors.background};
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
 
-        transform: ${(p) => (p.$activeButtonMobile ? "rotate(30deg)" : "rotate(0)")};
-        transition: 1s;
+  ${({ $isOpen }) =>
+    $isOpen &&
+    css`
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    `}
+`;
+
+export const MobileMenu = styled(motion.nav)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: none;
+  }
+`;
+
+export const MobileNavList = styled(motion.ul)`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+`;
+
+export const MobileNavItem = styled(motion.li)`
+  opacity: 0;
+`;
+
+export const MobileNavLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  font-family: ${({ theme }) => theme.typography.fontFamily.display};
+  font-size: ${({ theme }) => theme.typography.fontSize["2xl"]};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.semibold};
+  color: ${({ theme }) => theme.colors.text.inverse};
+  text-decoration: none;
+  border-radius: ${({ theme }) => theme.borderRadius.xl};
+  transition: all ${({ theme }) => theme.duration.normal} ${({ theme }) => theme.easing.out};
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${({ theme }) => theme.colors.gradients.primary};
+    opacity: 0;
+    transition: opacity ${({ theme }) => theme.duration.fast} ${({ theme }) => theme.easing.out};
+    border-radius: ${({ theme }) => theme.borderRadius.xl};
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    &::before {
+      opacity: 1;
     }
+  }
 
-    @media (min-width: 1280px) {
-        display: none;
-    }
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+  }
+`;
+
+export const MobileMenuOverlay = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(4px);
 `;

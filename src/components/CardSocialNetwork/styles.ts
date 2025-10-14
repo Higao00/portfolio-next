@@ -65,7 +65,8 @@ export const LogoSocial = styled.img`
 `
 
 export const Title = styled.h2`
-    font-family: ${({ theme }) => theme.fonts.bold};
+    font-family: ${({ theme }) => theme.typography.fontFamily.display};
+    font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
     color: #ffffff;
     padding: 0.5rem;
     margin: 0;

@@ -1,0 +1,151 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "navigation": {
+    "home": "Home",
+    "skills": "Skills",
+    "formations": "Education",
+    "projects": "Projects",
+    "socialNetworks": "Social Networks",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Higor Henrique",
+    "title": "Full Stack Developer",
+    "description": "Specialized in creating modern and scalable web solutions using the latest market technologies. I transform ideas into incredible digital experiences.",
+    "contactButton": "Get in Touch",
+    "projectsButton": "View Projects",
+    "stats": {
+      "experience": "Years of Experience",
+      "projects": "Completed Projects",
+      "clients": "Satisfied Clients",
+      "technologies": "Technologies Mastered"
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Discover the technologies and tools I master to create exceptional web solutions.",
+    "filters": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools"
+    },
+    "stats": {
+      "totalSkills": "Technologies",
+      "experience": "Years of Exp.",
+      "projects": "Projects",
+      "certifications": "Certifications"
+    }
+  },
+  "formations": {
+    "title": "My Education",
+    "subtitle": "My educational and professional journey, focused on technology and innovation.",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "planned": "Planned"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Explore some of the projects I've developed, from institutional websites to complex management systems.",
+    "filters": {
+      "all": "All Projects",
+      "website": "Websites",
+      "system": "Systems",
+      "landing": "Landing Pages"
+    },
+    "status": {
+      "active": "Active",
+      "development": "In Development",
+      "completed": "Completed"
+    },
+    "visitButton": "Visit",
+    "stats": {
+      "totalProjects": "Projects Completed",
+      "activeProjects": "Active Projects",
+      "satisfaction": "Satisfaction Rate",
+      "experience": "Years of Experience"
+    }
+  },
+  "socialNetworks": {
+    "title": "Social Networks",
+    "subtitle": "Connect with me on social media and follow my work and tech world updates.",
+    "connectButton": "Connect",
+    "stats": {
+      "platforms": "Platforms",
+      "followers": "Followers",
+      "posts": "Posts",
+      "engagement": "Engagement"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's talk about your next project? I'm always available to discuss new opportunities.",
+    "methods": {
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "descriptions": {
+      "whatsapp": "Quick response during business hours",
+      "email": "For formal proposals and documents",
+      "phone": "Calls by appointment"
+    },
+    "actions": {
+      "sendMessage": "Send message",
+      "sendEmail": "Send email",
+      "callNow": "Call now"
+    },
+    "form": {
+      "title": "Send a Message",
+      "description": "Fill out the form below and I'll get back to you as soon as possible. All fields are required.",
+      "fields": {
+        "name": "Full Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "subjects": {
+        "development": "Software Development",
+        "personal": "Personal Contact",
+        "help": "Programming Help",
+        "job": "Job Opportunity",
+        "consulting": "Consulting",
+        "general": "General Questions"
+      },
+      "placeholders": {
+        "message": "Describe your project or need..."
+      },
+      "validation": {
+        "nameRequired": "Name is required",
+        "nameMinLength": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "messageMinLength": "Message must be at least 10 characters"
+      },
+      "submitButton": "Send Message",
+      "sending": "Sending...",
+      "privacyNote": "Your data is protected and used only to respond to your message. Guaranteed response within 24 hours."
+    },
+    "stats": {
+      "responseTime": "Response time",
+      "responseRate": "Response rate",
+      "contactMethods": "Contact methods"
+    },
+    "successMessage": "Thank you! I'll be in touch soon! 👏👏👏"
+  }
+}

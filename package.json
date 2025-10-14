@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev -p 3002 --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p 3002",
+    "lint": "next lint",
+    "analyze": "ANALYZE=true npm run build",
+    "build:analyze": "cross-env ANALYZE=true npm run build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -15,11 +17,16 @@
     "@mui/icons-material": "^5.10.3",
     "@mui/lab": "^5.0.0-alpha.101",
     "@mui/material": "^5.10.3",
+    "@next/bundle-analyzer": "^15.5.5",
+    "critters": "^0.0.23",
     "framer-motion": "^11.13.1",
+    "i18next": "^25.6.0",
     "next": "^15.0.3",
     "react": "^18.3.1",
+    "react-country-flag": "^3.1.0",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.2",
+    "react-i18next": "^16.0.1",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {

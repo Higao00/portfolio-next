@@ -1,43 +1,43 @@
-export default [
+import { SocialNetwork } from "@/types";
+import * as Icons from "@mui/icons-material";
+
+const socialNetworksData: SocialNetwork[] = [
     {
         name: "GitHub",
-        link: "https://github.com/Higao00",
-        logo: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/svg-icons/GitHub.svg",
-        qrcode: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/qr-codes/qrcode-github.png",
-        type: "social",
-        color: "#adadadeb",
+        url: "https://github.com/Higao00",
+        icon: Icons.GitHub,
+        username: "@Higao00"
     },
     {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/higor-henrique-89105a187",
-        logo: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/svg-icons/LinkedIn.svg",
-        qrcode: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/qr-codes/qrcode-linkedin.png",
-        type: "social",
-        color: "#0a66c2",
+        name: "LinkedIn", 
+        url: "https://www.linkedin.com/in/higor-henrique-89105a187",
+        icon: Icons.LinkedIn,
+        username: "Higor Henrique"
     },
     {
         name: "Instagram",
-        link: "https://www.instagram.com/higaofreitas",
-        logo: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/svg-icons/Instagram.svg",
-        qrcode: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/qr-codes/qrcode-instagram.png",
-        type: "social",
-        color: "#c44564",
+        url: "https://www.instagram.com/higaofreitas",
+        icon: Icons.Instagram,
+        username: "@higaofreitas"
     },
-
     {
-        name: "Outlook",
-        link: "freitashigor@hotmail.com",
-        logo: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/svg-icons/Outlook.svg",
-        qrcode: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/qr-codes/qrcode-outlook.png",
-        type: "email",
-        color: "#016bbb",
+        name: "WhatsApp",
+        url: "https://wa.me/5516993031255",
+        icon: Icons.WhatsApp,
+        username: "+55 16 99303-1255"
+    },
+    {
+        name: "Email",
+        url: "mailto:freitashigor@hotmail.com",
+        icon: Icons.Email,
+        username: "freitashigor@hotmail.com"
     },
     {
         name: "Gmail",
-        link: "freitashigor16@gmail.com",
-        logo: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/svg-icons/Gmail.svg",
-        qrcode: "https://zurke-innovation.s3.us-east-1.amazonaws.com/portfolio/images/qr-codes/qrcode-gmail.png",
-        type: "email",
-        color: "#fbbc04",
-    },
-]
+        url: "mailto:freitashigor16@gmail.com", 
+        icon: Icons.Mail,
+        username: "freitashigor16@gmail.com"
+    }
+];
+
+export default socialNetworksData;
