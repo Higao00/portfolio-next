@@ -69,8 +69,8 @@ const Home: React.FC = () => {
 
   // Estatísticas (você pode conectar com APIs reais)
   const stats = [
-    { number: '50+', label: isClient ? t.stats.projects : 'Projetos' },
-    { number: '3+', label: isClient ? t.stats.experience : 'Anos Exp.' },
+    { number: '30+', label: isClient ? t.stats.projects : 'Projetos' },
+    { number: '6+', label: isClient ? t.stats.experience : 'Anos Exp.' },
     { number: '15+', label: isClient ? t.stats.technologies : 'Tecnologias' },
     { number: '100%', label: isClient ? t.stats.satisfaction : 'Satisfação' },
   ];

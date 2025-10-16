@@ -95,7 +95,7 @@ const Contact = () => {
   const stats = [
     { number: '24h', label: t.stats.responseTime },
     { number: '100%', label: t.stats.returnRate },
-    { number: '3+', label: t.stats.contactMethods }
+    { number: '6+', label: t.stats.contactMethods }
   ];
 
   return (

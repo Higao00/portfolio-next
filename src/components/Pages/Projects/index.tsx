@@ -93,7 +93,7 @@ export default function Projects() {
     { number: projectsData.length.toString(), label: t.title },
     { number: projectsData.filter(p => p.status === 'active').length.toString(), label: t.status.active },
     { number: '100%', label: t.stats.satisfaction },
-    { number: '3+', label: t.stats.experience }
+    { number: '6+', label: t.stats.experience }
   ];
 
   return (

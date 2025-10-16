@@ -248,7 +248,7 @@ const Skills: React.FC = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 1.0 }}
                         >
-                            <S.StatNumber>3+</S.StatNumber>
+                            <S.StatNumber>6+</S.StatNumber>
                             <S.StatLabel>{isClient ? t.stats.experience : 'Anos de Experiência'}</S.StatLabel>
                         </S.StatCard>
 
@@ -258,7 +258,7 @@ const Skills: React.FC = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 1.1 }}
                         >
-                            <S.StatNumber>50+</S.StatNumber>
+                            <S.StatNumber>30+</S.StatNumber>
                             <S.StatLabel>{isClient ? t.stats.projects : 'Projetos Concluídos'}</S.StatLabel>
                         </S.StatCard>
                     </S.StatsSection>
