@@ -193,8 +193,8 @@ const Home: React.FC = () => {
             transition: { delay: 1.5 }
           }}
         >
-          <div>{isClient ? t.exploreWork : "Explore meu trabalho"}</div>
-          <S.ScrollArrow
+          {/* <div>{isClient ? t.exploreWork : "Explore meu trabalho"}</div> */}
+          {/* <S.ScrollArrow
             animate={{ 
               y: [0, 10, 0],
               transition: { 
@@ -205,7 +205,7 @@ const Home: React.FC = () => {
             }}
           >
             ↓
-          </S.ScrollArrow>
+          </S.ScrollArrow> */}
         </S.ScrollIndicator>
       </S.HeroSection>
     </Transitions>
